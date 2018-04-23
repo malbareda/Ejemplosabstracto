@@ -5,6 +5,7 @@ public abstract class Professor {
 	String Instituto;
 	String Modulo;
 	String Edad;
+	int Mn;
 	boolean sillaGaming;
 	
 	public Professor(){
@@ -33,6 +34,13 @@ public abstract class Professor {
 		System.out.println("Sin ataque especial");
 	}
 	
+	
 	public abstract String toString();
+	
+	public void ponerNota( Alumno a, int nota) {
+		int[] tnotas = a.getNotas();
+		tnotas[this.Mn] = nota;
+		a.setNotas(tnotas);
+	}
 
 }
